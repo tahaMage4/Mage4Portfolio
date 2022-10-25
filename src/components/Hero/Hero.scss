@@ -1,0 +1,99 @@
+@import "../../style/Variable/var.scss";
+/* Banner ~ Section */
+section.banner {
+  max-height: 500px;
+  height: 100%;
+  background-color: $primary-color;
+  display: flex;
+  overflow: hidden;
+}
+
+section.banner .box {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.banner .box:first-child {
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  font-family: $Jost-font;
+}
+section.banner .box img {
+  height: 450px;
+  animation: move 3s infinite linear 0.3s;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+section.banner .box .content {
+  margin-left: 20%;
+}
+section.banner .box h1 {
+  font-size: 40px;
+  color: #000;
+}
+section.banner .box p {
+  color: #000;
+  margin-block: 5px;
+}
+section.banner .box .btns {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+section.banner .box .btns a {
+  padding: 8px 22px;
+}
+section.banner .box .btns span {
+  position: relative;
+}
+section.banner .box .btns .btn {
+  background-color: $btn-color;
+  outline: none;
+  position: relative;
+}
+section.banner .box .btns .btn:first-child::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: $primary-color;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease 0.3s;
+  transform: translateX(-100%);
+}
+section.banner .box .btns .btn:first-child:hover::before {
+  transform: translateX(0);
+  animation: outline 1s forwards 0.5s;
+}
+@keyframes outline {
+  0% {
+    outline: none;
+  }
+  100% {
+    outline: 2px solid #fff;
+    border-radius: 20px;
+  }
+}
+section.banner .box .btns .btn.video {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+section.banner .box .btns .btn.video i {
+  font-size: 30px;
+}
+section.banner .box .btns .btn.video:hover i {
+  color: $btn-color;
+}

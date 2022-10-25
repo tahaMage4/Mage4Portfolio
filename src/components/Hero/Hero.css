@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+/* Banner ~ Section */
+section.banner {
+  max-height: 500px;
+  height: 100%;
+  background-color: #37517e;
+  display: flex;
+  overflow: hidden;
+}
+
+section.banner .box {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.banner .box:first-child {
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  font-family: "Jost", sans-serif;
+}
+
+section.banner .box img {
+  height: 450px;
+  -webkit-animation: move 3s infinite linear 0.3s;
+          animation: move 3s infinite linear 0.3s;
+}
+
+@-webkit-keyframes move {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+section.banner .box .content {
+  margin-left: 20%;
+}
+
+section.banner .box h1 {
+  font-size: 40px;
+  color: #000;
+}
+
+section.banner .box p {
+  color: #000;
+  margin-block: 5px;
+}
+
+section.banner .box .btns {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+section.banner .box .btns a {
+  padding: 8px 22px;
+}
+
+section.banner .box .btns span {
+  position: relative;
+}
+
+section.banner .box .btns .btn {
+  background-color: #47b2e5;
+  outline: none;
+  position: relative;
+}
+
+section.banner .box .btns .btn:first-child::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #37517e;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease 0.3s;
+  transform: translateX(-100%);
+}
+
+section.banner .box .btns .btn:first-child:hover::before {
+  transform: translateX(0);
+  -webkit-animation: outline 1s forwards 0.5s;
+          animation: outline 1s forwards 0.5s;
+}
+
+@-webkit-keyframes outline {
+  0% {
+    outline: none;
+  }
+  100% {
+    outline: 2px solid #fff;
+    border-radius: 20px;
+  }
+}
+
+@keyframes outline {
+  0% {
+    outline: none;
+  }
+  100% {
+    outline: 2px solid #fff;
+    border-radius: 20px;
+  }
+}
+section.banner .box .btns .btn.video {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+section.banner .box .btns .btn.video i {
+  font-size: 30px;
+}
+
+section.banner .box .btns .btn.video:hover i {
+  color: #47b2e5;
+}/*# sourceMappingURL=Hero.css.map */

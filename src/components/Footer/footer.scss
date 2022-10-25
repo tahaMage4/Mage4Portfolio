@@ -1,0 +1,26 @@
+@import "../../style/Variable/var.scss";
+
+footer {
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $light-gray;
+}
+footer .copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  cursor: default;
+}
+footer .copyright i > span {
+  font-family: $Roboto-font;
+  letter-spacing: 2.5px;
+}
+footer .copyright > span {
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-family: $Jost-font;
+}

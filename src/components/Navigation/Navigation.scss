@@ -1,0 +1,193 @@
+/* General Classes */
+
+@import "../../style/Variable/var.scss";
+
+.mx-1170 {
+  max-width: 1170px;
+  margin-inline: auto;
+}
+
+.mobile {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.btn {
+  outline: 2px solid $btn-color;
+  padding: 5px 15px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.btn:hover {
+  background-color: $btn-color;
+  color: $light-gray;
+}
+
+.d-down {
+  margin-right: 10px;
+}
+.d-down::before {
+  content: "\f078";
+  font-family: $fontAwesome;
+  position: absolute;
+  color: #fff;
+  right: -15px;
+  top: 3px;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.left-to-right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #ddd;
+  height: 1px;
+  bottom: 0;
+}
+
+.left-to-right::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  background-color: $btn-color;
+  height: 3px;
+  left: $from-left;
+  transform-origin: center;
+  bottom: 0;
+  border-radius: 10px;
+  animation: left-to-right 6s infinite linear 0.5s;
+}
+
+@keyframes left-to-right {
+  35% {
+    left: 30%;
+    opacity: 1;
+  }
+  45%,
+  55% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    left: 30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+:is(p, p span)::selection,
+:is(p, p span)::-moz-selection {
+  background-color: #fff;
+  color: $btn-color;
+}
+
+h2::selection,
+h2::-moz-selection {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  animation: slide_down 0.5s forwards 0s;
+}
+@keyframes slide_down {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.normal {
+  animation: revert_ 0.5s forwards 0s;
+}
+@keyframes revert_ {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+// .bx {
+//   font-family: boxicons !important;
+//   font-weight: 400;
+//   font-style: normal;
+//   font-variant: normal;
+//   line-height: 1;
+//   text-rendering: auto;
+//   display: inline-block;
+//   text-transform: none;
+// }
+// .bx::before {
+//   font-size: 35px;
+// }
+// .bx-code-alt:before {
+//   content: "\ea69";
+// }
+// .bx-desktop::before {
+//   content: "\ea96";
+// }
+// .bx-magento::before {
+//   content: "\e94f";
+// }
+// .bx-search-alt::before {
+//   content: "\ebf8";
+// }
+
+/* Header */
+header {
+  color: #fff;
+  background-color: #37517e;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $Roboto-font;
+  padding-inline: 10%;
+  position: relative;
+  z-index: 10;
+}
+header nav > ul {
+  display: flex;
+  gap: 30px;
+}
+header nav > ul > li {
+  position: relative;
+  padding-block: 10px;
+}
+header ul li a {
+  white-space: nowrap;
+}
+header ul li a:hover {
+  color: $btn-color;
+}
+
+header nav > ul > li .sub-nav {
+  position: absolute;
+  display: none;
+  padding: 5px 10px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  top: 35px;
+  background-color: $primary-color;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+header nav > ul > li:hover .sub-nav {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 5px;
+}

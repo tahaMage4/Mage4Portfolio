@@ -1,0 +1,88 @@
+@import "../../style/Variable/var.scss";
+.sec-2-col {
+  display: flex;
+  background-color: $light-gray;
+  padding: 20px 80px;
+}
+.sec-2-col .item {
+  flex: 0 0 50%;
+  font-family: $Roboto-font;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.sec-2-col .item h2 {
+  font-family: $Jost-font;
+  font-size: 26px;
+  font-weight: 400;
+}
+.sec-2-col .item h2 span {
+  font-weight: 700;
+  color: $primary-color;
+}
+.sec-2-col .item > p {
+  color: #848484;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.sec-2-col .item:last-child {
+  align-items: flex-end;
+}
+.sec-2-col .item img {
+  width: 85%;
+}
+.sec-2-col .item img.size {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.accordion .acc-box {
+  background-color: $light-gray;
+  margin-block: 15px;
+  padding: 10px;
+}
+.accordion .acc-box a {
+  display: block;
+  width: 100%;
+  color: $primary-color;
+  font-weight: 600;
+  margin-block: 10px;
+  position: relative;
+}
+.accordion .acc-box p {
+  font-size: 14px;
+  max-height: 0;
+  color: #848484;
+  overflow: hidden;
+}
+.accordion .acc-box.active > p {
+  /* max-height: 400px; */
+  animation: mxheight400 5s forwards 0s;
+}
+@keyframes mxheight400 {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    max-height: 400px;
+  }
+}
+.accordion .acc-box a::after {
+  content: "\f0de";
+  font-family: $fontAwesome;
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+}
+.accordion .acc-box.active a::after {
+  content: "\f0dd";
+  font-family: $fontAwesome;
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+}

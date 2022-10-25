@@ -1,0 +1,61 @@
+@import "../../style/Variable/var.scss";
+
+.services {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: $light-gray;
+}
+.left-to-right {
+  text-align: center;
+  position: relative;
+  margin-inline: auto;
+  width: max-content;
+  overflow: hidden;
+}
+
+.services h2 {
+  margin-bottom: 0;
+}
+.services > p {
+  text-align: center;
+  font-family: $Roboto-font;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+}
+.services .box-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 20px;
+}
+.services .box-4 .box {
+  height: 250px;
+  background-color: $light-gray;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 6px 3px #ddd;
+  cursor: pointer;
+}
+.services .box-4 .box:hover {
+  transform: translateY(-20px);
+  box-shadow: inset 0 0 6px 3px #ddd;
+}
+.services .box-4 .box .content {
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  font-family: $Jost-font;
+}
+
+.services .box-4 .box .content p {
+  text-align: justify;
+  word-break: break-all;
+}
+.services .box-4 .box:hover :is(h3, i) {
+  color: $btn-color;
+}

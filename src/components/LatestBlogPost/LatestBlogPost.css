@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+.wrapper {
+  text-align: center;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f3f5fa;
+  word-break: break-all;
+}
+.wrapper .read_more {
+  background-color: #47b2e5;
+  color: #f3f5fa;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 6px;
+  border: none;
+}/*# sourceMappingURL=LatestBlogPost.css.map */

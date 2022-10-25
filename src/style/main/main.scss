@@ -1,0 +1,28 @@
+@import "https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap";
+@import "../Variable/var.scss";
+@import "../font/font.scss";
+@import "../mediaQuery/media.scss";
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: $primary-color;
+}
+a {
+  color: $light-gray;
+  position: relative;
+}

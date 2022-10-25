@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+/* Specific for Desktop Only ~ MIN-WiDTH 1280px */
+/* Mobile  ~ MAX-WIDTH 767px */
+@media screen and (max-width: 767px) {
+  /* General */
+  .mobile {
+    display: block;
+  }
+  .slide-menu {
+    transform: translateX(0);
+  }
+  /* Header */
+  header nav .fa-bars {
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: -2px;
+  }
+  header nav > ul {
+    position: fixed;
+    inset: 0;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 50px;
+    z-index: 2;
+    height: 100vh;
+    background-color: #37517e;
+    transform: translateX(100%);
+  }
+  header nav > ul > li {
+    padding-inline: 20px;
+  }
+  header nav > ul > li .sub-nav {
+    top: 0;
+    left: auto;
+    right: -120px;
+  }
+  header nav > ul .fa-xmark {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  /* Banner ~ Section */
+  section.banner {
+    max-height: 350px;
+  }
+  section.banner .box:first-child {
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  section.banner .box .content {
+    margin-left: 0;
+  }
+  section.banner .box .content h1 {
+    font-size: 35px;
+  }
+  section.banner .box:last-child {
+    display: none;
+  }
+  /* About Us ~ Section */
+  .about-us::before {
+    left: 0;
+  }
+  .about-us::after {
+    right: 0;
+    top: 130px;
+  }
+  .about-us .box-2 {
+    grid-template-columns: 1fr;
+  }
+  /* Accordion & image ~ Section */
+  .sec-2-col {
+    margin-top: 20px;
+    padding: 15px;
+    flex-direction: column-reverse;
+  }
+  .sec-2-col .item {
+    flex: 0 0 100%;
+  }
+  .sec-2-col .item:last-child {
+    align-items: center;
+  }
+}/*# sourceMappingURL=media.css.map */

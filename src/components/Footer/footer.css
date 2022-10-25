@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+footer {
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f3f5fa;
+}
+
+footer .copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  cursor: default;
+}
+
+footer .copyright i > span {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2.5px;
+}
+
+footer .copyright > span {
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-family: "Jost", sans-serif;
+}/*# sourceMappingURL=footer.css.map */
