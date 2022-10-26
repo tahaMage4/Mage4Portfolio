@@ -51,11 +51,11 @@ section.banner .box .content {
 
 section.banner .box h1 {
   font-size: 40px;
-  color: #000;
+  color: #f3f5fa;
 }
 
 section.banner .box p {
-  color: #000;
+  color: #f3f5fa;
   margin-block: 5px;
 }
 
@@ -103,7 +103,7 @@ section.banner .box .btns .btn:first-child:hover::before {
     outline: none;
   }
   100% {
-    outline: 2px solid #fff;
+    outline: 2px solid #f3f5fa;
     border-radius: 20px;
   }
 }
@@ -113,7 +113,7 @@ section.banner .box .btns .btn:first-child:hover::before {
     outline: none;
   }
   100% {
-    outline: 2px solid #fff;
+    outline: 2px solid #f3f5fa;
     border-radius: 20px;
   }
 }

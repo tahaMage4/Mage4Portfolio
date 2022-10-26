@@ -38,10 +38,10 @@ section.banner .box .content {
 }
 section.banner .box h1 {
   font-size: 40px;
-  color: #000;
+  color: $light-gray;
 }
 section.banner .box p {
-  color: #000;
+  color: $light-gray;
   margin-block: 5px;
 }
 section.banner .box .btns {
@@ -81,7 +81,7 @@ section.banner .box .btns .btn:first-child:hover::before {
     outline: none;
   }
   100% {
-    outline: 2px solid #fff;
+    outline: 2px solid $light-gray;
     border-radius: 20px;
   }
 }
