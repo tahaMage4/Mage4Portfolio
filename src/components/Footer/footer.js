@@ -1,18 +1,19 @@
 import React from "react"
-import { useFootermenuQuery } from "../../hooks/useFootermenuQuery"
+// import { useFootermenuQuery } from "../../hooks/useFootermenuQuery"
 import "./footer.scss"
 import { Link } from "gatsby"
+import { useMenuQuery } from "../../hooks/useMenuQuery"
 
 const Footer = () => {
-  const { footer, site } = useFootermenuQuery
-  console.log("footer", footer, site)
+  const { menu } = useMenuQuery
+  console.log("footer", menu)
   return (
     <footer>
       <div class="copyright">
         <i class="fa fa-copyright">
-          <span>Mage4</span>
+          <span>Tell us about your project</span>
         </i>
-        {/* {footer.map((mainItem) =>
+        {/* {menu.map((mainItem) =>
           !mainItem.parentId ? (
             <li key={mainItem.id}>
               <Link
@@ -36,10 +37,9 @@ const Footer = () => {
             </li>
           ) : null
         )} */}
-        {/* <span>Design by Saad & Develop by Taha Ahmed </span> */}
+
         <span>
-          @copyright By
-          <a> Mage4</a>
+          Get in touch with our team. Send us an email contact@mage4.com
         </span>
       </div>
     </footer>

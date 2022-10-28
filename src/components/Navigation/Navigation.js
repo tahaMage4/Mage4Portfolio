@@ -41,6 +41,11 @@ const Navigation = ({ menu }) => (
             ) : null
           )}
           <li>
+            <Link to="/contact">
+              <a>Contact Us</a>
+            </Link>
+          </li>
+          <li>
             <Link to="/portfolio">
               <a class="btn">Get Started</a>
             </Link>
